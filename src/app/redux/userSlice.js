@@ -12,8 +12,8 @@ const saveUsersToLocalStorage = (users) => {
 };
 
 export const fetchUsers = createAsyncThunk("fetchUsers", async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
-  return res?.json();
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+  return response?.json();
 });
 
 const userSlice = createSlice({
